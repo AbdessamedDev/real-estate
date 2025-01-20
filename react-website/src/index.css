@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: Outfit;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.first-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.128);
+    transition: .5s;
+}
+
+.first-btn:hover::before {
+    width: 100%
+}
